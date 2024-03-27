@@ -43,91 +43,81 @@
         text-align:center;
         margin-top:50px;
         }
-
     </style>
 
     <div class="container-fluid">
-    </div>
-
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <div class="enerji-formu">EnerjiFormu</div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link navbar-brand" href="#">Anasayfa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navbar-brand" href="#">Sorular</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navbar-brand" href="#">Tavsiyeler</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navbar-brand" href="#">Güncel Haberler</a>
-        </li>
-        <li class="nav-item">
-           <a class="nav-link navbar-brand" href="Forumkuralları.html">Kurallar ve İletişim</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Ara</button>
-      </form>
-       <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
-        <li class="nav-item">
-          <button class="nav-link" onclick="acModal('girisModal')">Giriş Yap</button>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kayıt Ol</a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</div>
-  <div class ="gundem-container">
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-sm-4">
-              <h3 class="mt-4">Gündem</h3>
-              <p>Enerji'de Güncel Yenilikler</p
-              <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Rüzgar Enerjisi'nin Geleceği</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Dalga Enerjisindeki Güncel Teknolojiler</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Türkiye'nin Enerji Potansiyeli</a>
-                </li>
-              </ul>
-              <hr class="d-sm-none">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="enerji-formu">EnerjiFormu</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="#">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="#">Sorular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="#">Tavsiyeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="#">Güncel Haberler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="Forumkuralları.html">Kurallar ve İletişim</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ara</button>
+                </form>
+                <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="nav-link" onclick="acModal('girisModal')">Giriş Yap</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kayıt Ol</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-sm-8">
-              <ul class="nav flex- column">
-
-              </ul>
-              <img src="https://wwwcdn.aselsan.com/api/file/ruzgar_turbini_banner.png" alt ="Seçimler" width ="200" height="100">
-              <p>.................................</p>
-              </ul>
-              <img src="https://www.cevrehaber.com.tr/images/upload/Dalga_enerjisi.jpg" alt ="Olaylar" width ="200" height="100">
-              <p> ..........................................................</p>
-              </ul>
-              <img src="https://torapetrol.com/wp-content/uploads/Yen%C4%B1leneb%C4%B1l%C4%B1r-Enerj%C4%B1-Kaynaklar%C4%B1.jpg" alt ="Seçimler" width ="200" height="100">
-
-              <p>.................................</p>
-      </div>
-
+        </div>
+    </nav>
 </div>
 
+<div class="container-fluid gundem-container">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="mt-4">Gündem</h3>
+                <p>Enerji'de Güncel Yenilikler</p>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rüzgar Enerjisi'nin Geleceği</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dalga Enerjisindeki Güncel Teknolojiler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Türkiye'nin Enerji Potansiyeli</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+            <div class="col-md-8">
+                <ul class="nav flex-column"></ul>
+                <img src="https://wwwcdn.aselsan.com/api/file/ruzgar_turbini_banner.png" alt="Seçimler" width="200" height="100">
+                <p>.................................</p>
+                <img src="https://www.cevrehaber.com.tr/images/upload/Dalga_enerjisi.jpg" alt="Olaylar" width="200" height="100">
+                <p> ..........................................................</p>
+                <img src="https://torapetrol.com/wp-content/uploads/Yen%C4%B1leneb%C4%B1l%C4%B1r-Enerj%C4%B1-Kaynaklar%C4%B1.jpg" alt="Seçimler" width="200" height="100">
+                <p>.................................</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>

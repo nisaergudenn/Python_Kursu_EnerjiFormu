@@ -9,15 +9,13 @@
     <style>
         .custom-heading {
             color: purple;
-            weight: 50px;
-            heigth:30px;
+            weight:50px;
+            height:30px;
         }
         .login-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+        background-image: url ('');
+        background-size :cover;
+        background-position: center;
         }
         .login-buttons {
             margin-top: 20px;
@@ -25,34 +23,39 @@
             flex-direction: column;
             align-items: center;
         }
+
         .social-buttons {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .container{
-        background-image: url ('');
-        background-size :cover;
-        background-position: center;
+        .nav-link{
+        font-family: Arial, sans-serif;
+        font-size:16px;
+        padding:5px 10px
+        border-radius: 5px;
+        color:#008000;
+        text-align:center;
         }
-      .enerji-formu{
-      font-weight:bold;
-      color: #008000;
-      font-size:24px;
-      margin-right:auto;
-      }
-      .navbar-brand{
-      margin-left:10px;
-      }
+
+        .gundem-container{
+        text-align:center;
+        margin-top:50px;
+        }
+
     </style>
+
+    <div class="container-fluid">
+    </div>
+
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <div class="enerji-formu">EnerjiFormu</div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,7 +73,7 @@
           <a class="nav-link navbar-brand" href="#">Güncel Haberler</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-brand" href="#">Üyeler</a>
+           <a class="nav-link navbar-brand" href="Forumkuralları.html">Kurallar ve İletişim</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -85,20 +88,47 @@
           <a class="nav-link" href="#">Kayıt Ol</a>
         </li>
       </ul>
-      <script>
-       function acModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-    function kapatModal() {
-        var modals = document.getElementsByClassName("modal");
-        for (var i = 0; i < modals.length; i++) {
-            modals[i].style.display = "none";
-        }
-    }
-      </script>
+
     </div>
   </div>
-</nav>
+</div>
+  <div class ="gundem-container">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3 class="mt-4">Gündem</h3>
+              <p>Enerji'de Güncel Yenilikler</p
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Rüzgar Enerjisi'nin Geleceği</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Dalga Enerjisindeki Güncel Teknolojiler</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Türkiye'nin Enerji Potansiyeli</a>
+                </li>
+              </ul>
+              <hr class="d-sm-none">
+            </div>
+            <div class="col-sm-8">
+              <ul class="nav flex- column">
+
+              </ul>
+              <img src="https://wwwcdn.aselsan.com/api/file/ruzgar_turbini_banner.png" alt ="Seçimler" width ="200" height="100">
+              <p>.................................</p>
+              </ul>
+              <img src="https://www.cevrehaber.com.tr/images/upload/Dalga_enerjisi.jpg" alt ="Olaylar" width ="200" height="100">
+              <p> ..........................................................</p>
+              </ul>
+              <img src="https://torapetrol.com/wp-content/uploads/Yen%C4%B1leneb%C4%B1l%C4%B1r-Enerj%C4%B1-Kaynaklar%C4%B1.jpg" alt ="Seçimler" width ="200" height="100">
+
+              <p>.................................</p>
+      </div>
+
+</div>
+
+
 
 </body>
 </html>

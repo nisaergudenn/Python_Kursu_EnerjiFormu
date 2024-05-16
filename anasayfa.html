@@ -128,35 +128,17 @@ span.psw {
      width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         .custom-heading {
-            color: purple;
-            weight:50px;
-            height:30px;
+            color: green;
+            weight: 50px;
+            heigth:30px;
         }
         .login-container {
-        background-image: url ('');
-        background-size :cover;
-        background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .login-buttons {
             margin-top: 20px;
@@ -164,25 +146,57 @@ span.psw {
             flex-direction: column;
             align-items: center;
         }
-
         .social-buttons {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .nav-link{
-        font-family: Arial, sans-serif;
-        font-size:16px;
-        padding:5px 10px
-        border-radius: 5px;
-        color:#008000;
-        text-align:center;
+        .container{
+        background-image: url ('');
+        background-size :cover;
+        background-position: center;
         }
+      .enerji-formu{
+      font-weight:bold;
+      color: #008000;
+      font-size:24px;
+      margin-right:auto;
+      }
+      .navbar-brand{
+      margin-left:10px;
+      }
 
-        .gundem-container{
-        text-align:center;
-        margin-top:50px;
+        news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .news-item {
+            flex: 0 1 calc(33.33% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin: 10px;
+            max-width: 300px; /* Haber kartlarının maksimum genişliği */
+        }
+        .news-item:hover {
+            transform: translateY(-5px);
+            text-align:center;
+
+        }
+        .news-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            text-align:center;
+        }
+        .news-title {
+            margin: 10px;
+            font-size: 20px;
+            color: #333;
         }
     </style>
 
@@ -252,7 +266,7 @@ span.psw {
                         <a id="loginBtn"  data-bs-toggle="modal" data-bs-target="#girisModal" onclick="document.getElementById('id01').style.display='block'" class="nav-link navbar-brand" href="giris.html">Giriş Yap</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-brand" href="kayıt ol.html">Kayıt Ol</a>
+                        <a class="nav-link navbar-brand" href="kayıtol.html">Kayıt Ol</a>
                     </li>
                 </ul>
 
@@ -343,9 +357,8 @@ function validateForm(event) {
 }
 </script>
 
-
 </body>
 
-
 </html>
+
 

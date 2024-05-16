@@ -2,20 +2,30 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnerjiFormu</title>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .custom-heading {
-            color: purple;
-            weight:50px;
-            height:30px;
+            color: darkblue;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .enerji-kutu {
+            border: 2px solid #000080;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .enerji-kutu h2 {
+            margin-top: 0;
         }
         .login-container {
-        background-image: url ('');
-        background-size :cover;
-        background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .login-buttons {
             margin-top: 20px;
@@ -23,28 +33,62 @@
             flex-direction: column;
             align-items: center;
         }
-
         .social-buttons {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .nav-link{
-        font-family: Arial, sans-serif;
-        font-size:16px;
-        padding:5px 10px
-        border-radius: 5px;
-        color:#008000;
-        text-align:center;
+        .container{
+        background-image: url ('');
+        background-size :cover;
+        background-position: center;
         }
+      .enerji-formu{
+      font-weight:bold;
+      color: #008000;
+      font-size:24px;
+      margin-right:auto;
+      }
+      .navbar-brand{
+      margin-left:10px;
+      }
 
-        .gundem-container{
-        text-align:center;
-        margin-top:50px;
+        news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .news-item {
+            flex: 0 1 calc(33.33% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin: 10px;
+            max-width: 300px; /* Haber kartlarının maksimum genişliği */
+        }
+        .news-item:hover {
+            transform: translateY(-5px);
+            text-align:center;
+
+        }
+        .news-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            text-align:center;
+        }
+        .news-title {
+            margin: 10px;
+            font-size: 20px;
+            color: #333;
         }
     </style>
-  <div class="container-fluid">
+</head>
+<body>
+<div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <div class="enerji-formu">EnerjiFormu</div>
@@ -57,41 +101,65 @@
                         <a class="nav-link navbar-brand" href="anasayfa.html">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-brand" href="#">Sorular</a>
+                        <a class="nav-link navbar-brand" href="sorular.html">Sorular</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-brand" href="yenilenebilirenerjiçeşitleri.html">Yenilenebilir Enerji Çeşitleri</a>
                     </li>
+                    <li class="nav-item">
                         <a class="nav-link navbar-brand" href="Forumkuralları.html">Kurallar ve İletişim </a>
                     </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ara</button>
+                </form>
             </div>
         </div>
     </nav>
 </div>
-<div class="container-fluid gundem-container">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 class="mt-4">Enerji Çeşitleri</h3
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Güneş Enerjisi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Rüzgar Enerjisi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hidroelektrik Enerjisi</a>
-                    </li>
-                  <li class="nav-item">
-                        <a class="nav-link" href="#">Dalga Enerjisi</a>
-                    </li>
-                  <li class="nav-item">
-                        <a class="nav-link" href="#">Jeotermal Enerji</a>
-                    </li>
-                  <li class="nav-item">
-                        <a class="nav-link" href="#">Biyoelektrik Enerjisi</a>
-                    </li>
-                </ul>
-                <hr class="d-sm-none">
+
+<div class="container mt-5">
+    <h1 class="custom-heading">Enerji Türleri</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="enerji-kutu">
+                <h2>Güneş Enerjisi</h2>
+                <p>Güneşten gelen ışık ve ısı enerjisinin kullanılmasıyla elde edilir. Fotovoltaik paneller veya termal enerji sistemleri aracılığıyla elektrik ve sıcak su üretiminde kullanılır. Güneş enerjisi, sınırsız bir kaynak olup çevreye hiçbir zarar vermez.</p>
             </div>
+        </div>
+        <div class="col-md-4">
+            <div class="enerji-kutu">
+                <h2>Rüzgar Enerjisi</h2>
+                <p>Rüzgar türbinleri sayesinde rüzgarın kinetik enerjisi mekanik enerjiye dönüştürülür ve jeneratörler aracılığıyla elektrik üretilir. Rüzgar enerjisi, temiz, sınırsız ve yenilenebilir bir kaynaktır ve karbon emisyonlarını azaltmada etkilidir.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="enerji-kutu">
+                <h2>Biyokütle Enerjisi</h2>
+                <p>Organik materyallerin (ahşap, bitki artıkları, hayvan dışkıları vb.) yanması veya fermantasyonuyla elde edilir. Biyokütle enerjisi, biyolojik olarak yenilenebilir bir kaynaktır ve organik atıkların geri dönüşümünü teşvik eder.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="enerji-kutu">
+                <h2>Jeotermal Enerji</h2>
+                <p>Yer altındaki termal enerjinin kullanılmasıyla elde edilir. Jeotermal kaynaklar genellikle volkanik aktivitenin olduğu bölgelerde bulunur. Bu enerji kaynağı, elektrik üretiminden ısıtma sistemlerine kadar çeşitli amaçlar için kullanılabilir.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="enerji-kutu">
+                <h2>Gelgit Enerjisi</h2>
+                <p>Okyanus gelgitleri veya deniz akıntılarından elde edilir. Gelgit enerjisi, suyun hareket enerjisini kullanarak elektrik üretir ve temiz bir enerji kaynağı olup okyanusların dalgaları ve akıntılarından kaynaklanır.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="enerji-kutu">
+                <h2>Hidroelektrik Enerji</h2>
+                <p>Su akışının veya suyun yükseklik farkının kullanılmasıyla elde edilir. Barajlar veya nehirlerdeki akıntıları kontrol eden tesisler aracılığıyla suyun potansiyel enerjisi kinetik enerjiye dönüştürülerek elektrik üretilir. Hidroelektrik enerji, çevre dostu bir enerji kaynağı olup suyun doğal döngüsünü kullanır.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

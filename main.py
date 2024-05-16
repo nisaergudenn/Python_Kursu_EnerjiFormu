@@ -1,46 +1,54 @@
-from flask import Flask ,render_template, request,redirect
-import pymongo
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from flask import (Flask, request, render_template)
+
 app = Flask(__name__)
 
 
+import pypyodbc
 
-client = pymongo.MongoClient()
-db = client["EnerjiFormu"]
+server = 'DESKTOP-I2FFSFS'
+database = 'EnerjiForm'
+port = '1433'  # SQL Server'ın kullandığı port numarası (genellikle 1433)
+
+conn_str = "f Driver=SQL Server;Server={server},{port};Database={database};Trusted_Connection=yes;"
+
+try:
+    # SQL Server'e bağlanma
+    conn = pypyodbc.connect(conn_str)
+
+    # Bağlantıyı kullanarak bir imleç oluşturma
+    cursor = conn.cursor()
+
+    # SQL sorgusunu çalıştırma
+    cursor.execute('SELECT * FROM gundem')
+
+    # Sonuçları alıp yazdırma
+    gundem_baslik = cursor.fetchall()
+    for row in gundem_baslik:
+        print(row)
+
+    # Bağlantıyı kapatma
+    conn.close()
+    print("Bağlantı başarıyla sonlandırıldı.")
+
+except pypyodbc.Error as e:
+    print("Bağlantı hatası:", e)
 
 
-@app.route('/hello/<name>')
-def hello_name (name) :
-    return 'Hello %s!' % name
+@app.route('/')
+def index():
+    return render_template('anasayfa.html')
 
+@app.route('/giris', methods=['POST'])
+def login():
+    email = request.form['email']
+    password = request.form['sifre']
 
-@app.route ('/')
-def home_page () :
-    return render_template("home.html")
-
-@app.route('/uye-ol', methods=["GET", "POST"])
-def uye_ol ():
-    if request.method =='GET' :
-        return render_template("uye-ol.html")
+    if email in users and users[email] == password:
+        return "<script>alert('Giris yaptınız');</script>"
     else:
-        email = request.form["email"]
-        sifre = request.form["sifre"]
-        adsoyad = request.form["adsoyad"]
+        return "<script>alert('Hatalı mail veya sifre');</script>"
 
 
-        return redirect("/giris",302)
-@app.route('/giris', methods =["GET", "POST"])
-def giris():
-    if request.method == 'GET' :
-        return render_template("giris.html")
-    else:
-        email = request.form["email"]
-        sifre = request.form["sifre"]
-        adsoyad = request.form["adsoyad"]
 
-        print("kullanici:", kullanici)
-        if kullanici and kullanici["sifre"] == sifre:
-            return redirect("/", 302)
-        else:
-            return "Kullanıcı Bulunamadı ya da Şifre Hatalı"
-            if _name_ == ' _main_':
-                app.run (debug = True , host = "0.0.0.0", port = 8001)
